@@ -7,31 +7,37 @@ Install [AWS IoT Greengrass](https://docs.aws.amazon.com/greengrass/latest/devel
 * Micro USB power<br/>
 
 ## Raspberry Pi Setup
-Download latest Raspberry PI OS https://downloads.raspberrypi.org/raspios_lite_armhf_latest
-Use Etcher to flash image to a SD Card
-Create empty SSH file and create wpa_supplicant.conf file with your WIFI credentials
+Download latest Raspberry PI OS https://downloads.raspberrypi.org/raspios_lite_armhf_latest<br/>
+Use [Etcher](https://www.balena.io/etcher/) to flash image to your SD Card<br/>
+Create empty SSH file and create wpa_supplicant.conf file with your WIFI credentials<br/>
+SSH to your Rpi Zero, run raspi-config to set new password, set hostname and expand file system
 
 ```
 sudo raspi-config
+```
+
+Update and upgrade
+```
 sudo apt-get update
 sudo apt-get upgrade
+```
 
+```
 sudo adduser --system ggc_user
 sudo addgroup --system ggc_group
-
 cd /etc/sysctl.d
 sudo nano 98-rpi.conf
 append to end:
 fs.protected_hardlinks = 1
 fs.protected_symlinks = 1
-
 sudo reboot
+```
 
+```
 cd /boot/
 sudo nano cmdline.txt
 append to end of the first line:
 cgroup_enable=memory cgroup_memory=1
-
 sudo reboot
 ```
 
