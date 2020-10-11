@@ -67,13 +67,13 @@ Reboot
 ```
 sudo reboot
 ```
-## AWS Greengrass setup [reference](https://docs.aws.amazon.com/greengrass/latest/developerguide/gg-config.html)
+## AWS Greengrass setup ([reference](https://docs.aws.amazon.com/greengrass/latest/developerguide/gg-config.html))
 Follow AWS console to create greengrass group and greengrass core<br/>
 Once you complete the steps, download the security resources as a tar.gz file, these are the certificates that you will need in the next step<br/>
 Download the greengrass core software for your architecture, in this case [Raspbian Linuz Armv6l](https://d1onfpft10uf5o.cloudfront.net/greengrass-core/downloads/1.11.0/greengrass-linux-armv6l-1.11.0.tar.gz)<br/>
 Use Winscp to copy the certificates tar.gz file and the core software tar.gz to your Rpi Zero
 
-## AWS Greengrass core setup [reference](https://docs.aws.amazon.com/greengrass/latest/developerguide/gg-device-start.html)
+## AWS Greengrass core setup ([reference](https://docs.aws.amazon.com/greengrass/latest/developerguide/gg-device-start.html))
 SSH to your RPI Zero and run the commands
 ```
 sudo tar -xzvf greengrass-linux-armv6l-1.11.0.tar.gz /
