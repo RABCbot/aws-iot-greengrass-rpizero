@@ -23,7 +23,7 @@ network={
 }
 ```
 Your SD Card should look like this<br/>
-![sdcard](sdcard.png)
+![sdcard](sdcard.png)<br/>
 Insert the SD Card in your Rpi Zero and boot<br/>
 Find the IP of your Rpi Zero and SSH to it<br/>
 
