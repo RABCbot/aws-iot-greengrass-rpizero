@@ -11,7 +11,7 @@ Download latest Raspberry PI OS https://downloads.raspberrypi.org/raspios_lite_a
 Use Etcher to flash image to a SD Card
 Create empty SSH file and create wpa_supplicant.conf file with your WIFI credentials
 
-'''
+```
 sudo raspi-config
 sudo apt-get update
 sudo apt-get upgrade
@@ -33,7 +33,7 @@ append to end of the first line:
 cgroup_enable=memory cgroup_memory=1
 
 sudo reboot
-'''
+```
 
 AWS Console
 Create greengrass group and core
