@@ -12,3 +12,21 @@ Add inline policy
     ]
 }
 ```
+
+Configure a test event to turn a light on
+```
+{
+    "domain":"light",
+    "service": "turn_on",
+    "entity_id": "light.office_light"
+}
+```
+and another to turn the light off
+```
+{
+    "domain":"light",
+    "service": "turn_off",
+    "entity_id": "light.office_light"
+}
+```
+
