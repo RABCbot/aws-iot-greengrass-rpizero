@@ -94,11 +94,9 @@ Scroll down to Stream Manager, and set to disabled<br/>
 ## AWS Greengrass core setup ([reference](https://docs.aws.amazon.com/greengrass/latest/developerguide/gg-device-start.html))
 SSH to your RPI Zero and run the commands
 ```
-sudo tar -xzvf greengrass-linux-armv6l-1.11.0.tar.gz /
-sudo tar -xzvf xxxxxxx-setup.tar.gz /greengrass
-sudo cp ./certs/* ./greengrass/certs
-sudo cp .config/* ./greengrass/config
-cd greengrass/certs
+sudo tar -xzvf greengrass-linux-armv6l-1.11.0.tar.gz -C /
+sudo tar -xzvf xxxxxxx-setup.tar.gz -C /greengrass
+cd /greengrass/certs
 sudo wget -O root.ca.pem https://www.amazontrust.com/repository/AmazonRootCA1.pem
 ```
 ## AWS Greengrass SDK
