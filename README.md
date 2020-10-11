@@ -48,7 +48,7 @@ SSH back to your Rpi Zero, login with user: pi and your new password<br/>
 Run update and upgrade
 ```
 sudo apt-get update
-sudo apt-get upgrade
+sudo apt-get upgrade -y
 ```
 ## AWS Greengrass core requirements ([reference](https://docs.aws.amazon.com/greengrass/latest/developerguide/setup-filter.rpi.html))
 SSH back your RPI Zero and add Greengrass core user and group
