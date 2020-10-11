@@ -119,7 +119,7 @@ sudo cd /greengrass/ggc/core
 sudo ./greengrassc start
 ```
 
-# AWS Lambda test
+## AWS Lambda test
 Create a new lambda using my [tester](https://github.com/RABCbot/aws-iot-greengrass-rpizero/blob/main/lambda/tester/tester.py) python code<br/>
 This lambda requires an inline permission to write to the IoT Core topic, as explain in [readme](https://github.com/RABCbot/aws-iot-greengrass-rpizero/blob/main/lambda/tester/readme.md)<br/>
 Click deploy, add the test json and click test<br/>
