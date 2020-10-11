@@ -1,5 +1,5 @@
 # AWS IoT Greengrass on a Raspberry Pi Zero
-Goal is to install [AWS IoT Greengrass](https://docs.aws.amazon.com/greengrass/latest/developerguide/quick-start.html) on a headless Raspberry Pi Zero W and deploy a lambda to control Home-assistant locally
+Goal is to install [AWS IoT Greengrass](https://docs.aws.amazon.com/greengrass/latest/developerguide/quick-start.html) on a headless Raspberry Pi Zero W and deploy a local lambda to control Home-assistant
 
 ## Hardware
 * Raspberry Pi Zero W<br/>
