@@ -9,7 +9,7 @@ Goal is to install [AWS IoT Greengrass](https://docs.aws.amazon.com/greengrass/l
 ## Raspberry Pi Setup 
 Download latest Raspberry PI OS https://downloads.raspberrypi.org/raspios_lite_armhf_latest<br/>
 Use [Etcher](https://www.balena.io/etcher/) to flash image to your SD Card<br/>
-Browse to your SD card and create an empty file named SSH
+Browse to your SD card and create an empty file named SSH<br/>
 Using a text editor, create a file named wpa_supplicant.conf, enter your WIFI credentials
 and copy the file to your SD card<br/>
 ```
@@ -69,15 +69,15 @@ sudo reboot
 ```
 ## AWS Greengrass setup [reference](https://docs.aws.amazon.com/greengrass/latest/developerguide/gg-config.html)
 Follow AWS console to create greengrass group and greengrass core<br/>
-Once you complete the steps, download the security resources as a tar.gz file, these are certificates that you will need in the next steps<br/>
+Once you complete the steps, download the security resources as a tar.gz file, these are the certificates that you will need in the next step<br/>
 Download the greengrass core software for your architecture, in this case [Raspbian Linuz Armv6l](https://d1onfpft10uf5o.cloudfront.net/greengrass-core/downloads/1.11.0/greengrass-linux-armv6l-1.11.0.tar.gz)<br/>
-Use Winscp to copy both files to your Rpi Zero
+Use Winscp to copy the certificates tar.gz file and the core software tar.gz to your Rpi Zero
 
 ## AWS Greengrass core setup [reference](https://docs.aws.amazon.com/greengrass/latest/developerguide/gg-device-start.html)
-SSH to your RPI Zero and run commands
+SSH to your RPI Zero and run the commands
 ```
 sudo tar -xzvf greengrass-linux-armv6l-1.11.0.tar.gz /
-sudo tar -xzvf edgewater-setup.tar.gz /greengrass
+sudo tar -xzvf xxxxxxx-setup.tar.gz /greengrass
 sudo cp ./certs/* ./greengrass/certs
 sudo cp .config/* ./greengrass/config
 cd greengrass/certs
@@ -89,8 +89,7 @@ Create lambda
 Configure Greengrass group to use lambda
 Configure Greengrass suscription
 
-Winscp copy your lambda (including sdk subfolder) to your Pi
-/greengrass/core/runtime/python
+Winscp copy your lambda (including sdk subfolder) to your Pi /greengrass/core/runtime/python
 
 Start greengrassc
 
