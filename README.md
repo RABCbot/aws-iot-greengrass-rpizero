@@ -83,7 +83,13 @@ sudo cp .config/* ./greengrass/config
 cd greengrass/certs
 sudo wget -O root.ca.pem https://www.amazontrust.com/repository/AmazonRootCA1.pem
 ```
-
+## AWS Greengrass SDK
+Navigate to the [Greengrass Core Python SDK](https://github.com/aws/aws-greengrass-core-sdk-python) github page<br/>
+Click on the Code menu drop down, and select download zip<br/>
+Unzip the code and extract the folder greengrasssdk
+Winscp to your RPI Zero and copy this folder to /greengrass/ggc/core/runtime/python
+In theory this step is not needed, but in my case I had to manually copy the sdk folder and lambda to the RPI Pi Zero
+ 
 ## AWS Greengrass lambda
 Create lambda
 Configure Greengrass group to use lambda
