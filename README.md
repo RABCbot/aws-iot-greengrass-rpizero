@@ -7,10 +7,10 @@ Goal is to install [AWS IoT Greengrass](https://docs.aws.amazon.com/greengrass/l
 * Micro USB power<br/>
 
 ## Raspberry Pi Setup 
-Download latest [Raspberry PI OS](https://downloads.raspberrypi.org/raspios_lite_armhf_latest)<br/>
-Use [Etcher](https://www.balena.io/etcher/) to flash image to your SD Card<br/>
-Browse to your SD card and create an empty file named SSH<br/>
-Using a text editor, create a file named wpa_supplicant.conf, paste the text below, correct your WIFI credentials
+Download latest [Raspberry PI OS](https://downloads.raspberrypi.org/raspios_lite_armhf_latest) image<br/>
+Use [Etcher](https://www.balena.io/etcher/) to flash the image to your SD Card<br/>
+File explore to your SD card and create an empty file named: SSH<br/>
+Using a text editor, create a file named: wpa_supplicant.conf, paste the text below, correct your WIFI credentials
 and copy the file to your SD card<br/>
 ```
 country=US
@@ -22,6 +22,7 @@ network={
 	key_mgmt=WPA-PSK
 }
 ```
+Your Sd Card should look like ![this](sdcard.png)
 Insert the SD Card in your Rpi Zero and boot<br/>
 Find the IP of your Rpi Zero and SSH to it<br/>
 
