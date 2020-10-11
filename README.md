@@ -27,8 +27,8 @@ Your SD Card should look like this<br/>
 Insert the SD Card in your Rpi Zero and boot<br/>
 Find the IP of your Rpi Zero<br/>
 Use Putty to SSH to your Rpi Zero<br/>
-Accept the security warning>br/>
-Login with the default Raspbian user: pi and password: rasberry,br/>
+Accept the security warning<br/>
+Login with the default Raspbian user: pi and password: rasberry<br/>
 
 Use the Raspberry configuration tool to change the user password, hostname and under advance to expand the filesystem
 ```
