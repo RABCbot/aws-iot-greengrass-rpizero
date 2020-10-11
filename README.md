@@ -9,9 +9,21 @@ Goal is to install [AWS IoT Greengrass](https://docs.aws.amazon.com/greengrass/l
 ## Raspberry Pi Setup 
 Download latest Raspberry PI OS https://downloads.raspberrypi.org/raspios_lite_armhf_latest<br/>
 Use [Etcher](https://www.balena.io/etcher/) to flash image to your SD Card<br/>
-Create empty SSH file and create wpa_supplicant.conf file with your WIFI credentials<br/>
-Boot your Rpi Zero>br/>
-SSH to your Rpi Zero<br/>
+Browse to your SD card and create an empty file named SSH
+Using a text editor, create a file named wpa_supplicant.conf, enter your WIFI credentials
+and copy the file to your SD card<br/>
+```
+country=US
+ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
+update_config=1
+network={
+	ssid="<your-ssid>"
+	psk="<your wifi-password>"
+	key_mgmt=WPA-PSK
+}
+```
+Insert the SD Card in your Rpi Zero and boot<br/>
+Find the IP of your Rpi Zero and SSH to it<br/>
 
 Use the Raspberry configuration tool to change the user password, hostname and under advance to expand the filesystem
 ```
@@ -22,10 +34,14 @@ Run update and upgrade
 sudo apt-get update
 sudo apt-get upgrade
 ```
-Setup Rpi for Greengrass
+## AWS Greengrass requirements
+Add Greengrass core user and group
 ```
 sudo adduser --system ggc_user
 sudo addgroup --system ggc_group
+```
+Edit file 98-rpi.conf
+```
 cd /etc/sysctl.d
 sudo nano 98-rpi.conf
 ```
@@ -33,13 +49,18 @@ Append to end of the file
 ```
 fs.protected_hardlinks = 1
 fs.protected_symlinks = 1
+```
+Reboot
+```
 sudo reboot
 ```
-
+Edit cmdline.txt
 ```
 cd /boot/
 sudo nano cmdline.txt
-append to end of the first line:
+```
+append to end of the first line (not as a new line)
+```
 cgroup_enable=memory cgroup_memory=1
 ```
 Reboot
