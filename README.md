@@ -106,10 +106,10 @@ Unzip the file and extract the folder greengrasssdk<br/>
 Winscp to your RPI Zero and copy this folder to /greengrass/ggc/core/runtime/python<br/>
 In theory this step is not needed, but in my case I had to manually copy the sdk folder and lambda to the RPI Pi Zero
  
-## AWS Greengrass lambda
-Create lambda<br/>
-Configure Greengrass group to use lambda<br/>
-Configure Greengrass suscription<br/>
+## AWS Greengrass lambda ([reference](https://docs.aws.amazon.com/greengrass/latest/developerguide/create-lambda.html))
+Follow the reference to create the core lambda<br/>
+Instead of using the helloworld example, use my [hassbridge](https://github.com/RABCbot/aws-iot-greengrass-rpizero/blob/main/lambda/hassbridge/hassbridge.py) python code<br/>
+Complete the Greengrass group to use the lambda and the Greengrass grop subscriptions<br/>
 Note: In my case, I had to winscp copy the lambda (including sdk subfolder) to your Pi /greengrass/core/runtime/python<br/>
 
 ## AWS Greengrass core start
@@ -118,6 +118,11 @@ SSH to your RPI Zero and run the commands
 sudo cd /greengrass/ggc/core
 sudo ./greengrassc start
 ```
+
+# AWS Test lambda
+Create a new lambda using my [tester]https://github.com/RABCbot/aws-iot-greengrass-rpizero/blob/main/lambda/tester/tester.py python code<br/>
+This lambda requires an inline permission to write to the IoT Core topic, as explain in [readme](https://github.com/RABCbot/aws-iot-greengrass-rpizero/blob/main/lambda/tester/readme.md)<br/>
+Click deploy, add the test json and click test<br/>
 
 ## AWS Greengrass core troubleshooting
 ```
