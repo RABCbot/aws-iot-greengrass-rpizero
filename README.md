@@ -1,33 +1,36 @@
 # AWS IoT Greengrass on a Raspberry Pi Zero
-Install [AWS IoT Greengrass](https://docs.aws.amazon.com/greengrass/latest/developerguide/quick-start.html) on a headless Raspberry Pi Zero W
+Goal is to install [AWS IoT Greengrass](https://docs.aws.amazon.com/greengrass/latest/developerguide/quick-start.html) on a headless Raspberry Pi Zero W and deploy a lambda to control Home-assistant locally
 
 ## Hardware
 * Raspberry Pi Zero W<br/>
 * 32 GB SD Card<br/>
 * Micro USB power<br/>
 
-## Raspberry Pi Setup
+## Raspberry Pi Setup 
 Download latest Raspberry PI OS https://downloads.raspberrypi.org/raspios_lite_armhf_latest<br/>
 Use [Etcher](https://www.balena.io/etcher/) to flash image to your SD Card<br/>
 Create empty SSH file and create wpa_supplicant.conf file with your WIFI credentials<br/>
-SSH to your Rpi Zero, run raspi-config to set new password, set hostname and expand file system
+Boot your Rpi Zero>br/>
+SSH to your Rpi Zero<br/>
 
+Use the Raspberry configuration tool to change the user password, hostname and under advance to expand the filesystem
 ```
 sudo raspi-config
 ```
-
-Update and upgrade
+Run update and upgrade
 ```
 sudo apt-get update
 sudo apt-get upgrade
 ```
-
+Setup Rpi for Greengrass
 ```
 sudo adduser --system ggc_user
 sudo addgroup --system ggc_group
 cd /etc/sysctl.d
 sudo nano 98-rpi.conf
-append to end:
+```
+Append to end of the file
+```
 fs.protected_hardlinks = 1
 fs.protected_symlinks = 1
 sudo reboot
