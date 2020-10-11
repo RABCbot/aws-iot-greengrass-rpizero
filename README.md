@@ -35,7 +35,7 @@ sudo apt-get update
 sudo apt-get upgrade
 ```
 ## AWS Greengrass core requirements ([reference](https://docs.aws.amazon.com/greengrass/latest/developerguide/setup-filter.rpi.html))
-Add Greengrass core user and group
+SSH back your RPI Zero and add Greengrass core user and group
 ```
 sudo adduser --system ggc_user
 sudo addgroup --system ggc_group
