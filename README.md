@@ -30,9 +30,19 @@ Use Putty to SSH to your Rpi Zero<br/>
 Accept the security warning<br/>
 Login with the default Raspbian user: pi and password: raspberry<br/>
 
-Use the Raspberry configuration tool to change the user password, hostname and under advance to expand the filesystem
+Run the Raspberry configuration tool
 ```
 sudo raspi-config
+```
+Change the following parameters:<br/>
+* Change user password
+* Network options | Change Hostname
+* Localisation Options | Change Time Zone
+* Advanced Options | Expand Filesystem
+* Advanced Options | Change Memory split to 16
+Reboot
+```
+sudo reboot
 ```
 Run update and upgrade
 ```
