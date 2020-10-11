@@ -10,7 +10,7 @@ Goal is to install [AWS IoT Greengrass](https://docs.aws.amazon.com/greengrass/l
 Download latest [Raspberry PI OS](https://downloads.raspberrypi.org/raspios_lite_armhf_latest)<br/>
 Use [Etcher](https://www.balena.io/etcher/) to flash image to your SD Card<br/>
 Browse to your SD card and create an empty file named SSH<br/>
-Using a text editor, create a file named wpa_supplicant.conf, enter your WIFI credentials
+Using a text editor, create a file named wpa_supplicant.conf, paste the text below, correct your WIFI credentials
 and copy the file to your SD card<br/>
 ```
 country=US
