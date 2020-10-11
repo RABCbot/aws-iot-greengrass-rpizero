@@ -7,7 +7,7 @@ Goal is to install [AWS IoT Greengrass](https://docs.aws.amazon.com/greengrass/l
 * Micro USB power<br/>
 
 ## Raspberry Pi Setup 
-Download latest Raspberry PI OS https://downloads.raspberrypi.org/raspios_lite_armhf_latest<br/>
+Download latest [Raspberry PI OS](https://downloads.raspberrypi.org/raspios_lite_armhf_latest)<br/>
 Use [Etcher](https://www.balena.io/etcher/) to flash image to your SD Card<br/>
 Browse to your SD card and create an empty file named SSH<br/>
 Using a text editor, create a file named wpa_supplicant.conf, enter your WIFI credentials
@@ -34,7 +34,7 @@ Run update and upgrade
 sudo apt-get update
 sudo apt-get upgrade
 ```
-## AWS Greengrass core requirements [reference](https://docs.aws.amazon.com/greengrass/latest/developerguide/setup-filter.rpi.html)
+## AWS Greengrass core requirements ([reference](https://docs.aws.amazon.com/greengrass/latest/developerguide/setup-filter.rpi.html))
 Add Greengrass core user and group
 ```
 sudo adduser --system ggc_user
