@@ -91,13 +91,17 @@ Winscp to your RPI Zero and copy this folder to /greengrass/ggc/core/runtime/pyt
 In theory this step is not needed, but in my case I had to manually copy the sdk folder and lambda to the RPI Pi Zero
  
 ## AWS Greengrass lambda
-Create lambda
-Configure Greengrass group to use lambda
-Configure Greengrass suscription
+Create lambda<br/>
+Configure Greengrass group to use lambda<br/>
+Configure Greengrass suscription<br/>
+Note: In my case, I had to winscp copy the lambda (including sdk subfolder) to your Pi /greengrass/core/runtime/python<br/>
 
-Winscp copy your lambda (including sdk subfolder) to your Pi /greengrass/core/runtime/python
-
-Start greengrassc
+## AWS Greengrass core start
+SSH to your RPI Zero and run the commands
+```
+sudo cd /greengrass/ggc/core
+sudo ./greengrassc start
+```
 
 ## AWS Greengrass core troubleshooting
 ```
