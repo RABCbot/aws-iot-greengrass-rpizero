@@ -44,6 +44,7 @@ Reboot
 ```
 sudo reboot
 ```
+SSH back to your Rpi Zero, login with user: pi and your new password<br/>
 Run update and upgrade
 ```
 sudo apt-get update
