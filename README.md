@@ -91,7 +91,7 @@ Use [Winscp](https://winscp.net/eng/download.php) to copy the certificates tar.g
 On the AWS Console, drill down to AWS IoT > Greengrass > Groups > your group > Settings<br/>
 Scroll down to Stream Manager, and set to disabled<br/>
 
-## AWS Greengrass core setup ([reference](https://docs.aws.amazon.com/greengrass/latest/developerguide/gg-device-start.html))
+## AWS Greengrass Core setup ([reference](https://docs.aws.amazon.com/greengrass/latest/developerguide/gg-device-start.html))
 SSH to your RPI Zero and run the commands
 ```
 sudo tar -xzvf greengrass-linux-armv6l-1.11.0.tar.gz -C /
@@ -106,25 +106,26 @@ Unzip the file and extract the folder greengrasssdk<br/>
 Winscp to your RPI Zero and copy this folder to /greengrass/ggc/core/runtime/python<br/>
 In theory this step is not needed, but in my case I had to manually copy the sdk folder and lambda to the RPI Pi Zero
  
-## AWS Greengrass lambda ([reference](https://docs.aws.amazon.com/greengrass/latest/developerguide/create-lambda.html))
+## AWS Greengrass Lambda ([reference](https://docs.aws.amazon.com/greengrass/latest/developerguide/create-lambda.html))
 Follow the reference to create the core lambda<br/>
 Instead of using the helloworld example, use my [hassbridge](https://github.com/RABCbot/aws-iot-greengrass-rpizero/blob/main/lambda/hassbridge/hassbridge.py) python code<br/>
 Complete the Greengrass group to use the lambda and the Greengrass grop subscriptions<br/>
 Note: In my case, I had to winscp copy the lambda (including sdk subfolder) to your Pi /greengrass/core/runtime/python<br/>
 
-## AWS Greengrass core start
+## AWS Greengrass Core start
 SSH to your RPI Zero and run the commands
 ```
 sudo cd /greengrass/ggc/core
 sudo ./greengrassc start
 ```
 
-# AWS Test lambda
+# AWS Lambda test
 Create a new lambda using my [tester](https://github.com/RABCbot/aws-iot-greengrass-rpizero/blob/main/lambda/tester/tester.py) python code<br/>
 This lambda requires an inline permission to write to the IoT Core topic, as explain in [readme](https://github.com/RABCbot/aws-iot-greengrass-rpizero/blob/main/lambda/tester/readme.md)<br/>
 Click deploy, add the test json and click test<br/>
 
-## AWS Greengrass core troubleshooting
+## AWS Greengrass Core troubleshooting
+Any issues, review logs on your Rpi Zero:
 ```
 sudo nano var/log/system/runtime.log
 sudo nano var/log/user/us-east-1/114744974534/<your-lambda-name>.log
