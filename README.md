@@ -3,7 +3,7 @@ Goal is to install [AWS IoT Greengrass](https://docs.aws.amazon.com/greengrass/l
 
 ## Hardware
 * Raspberry Pi Zero W<br/>
-* 32 GB SD Card<br/>
+* Micro SD Card<br/>
 * Micro USB power<br/>
 
 ## Raspberry Pi Setup 
