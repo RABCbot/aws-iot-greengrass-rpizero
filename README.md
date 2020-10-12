@@ -40,7 +40,8 @@ Change the following parameters:<br/>
 * Localisation Options | Change Time Zone
 * Advanced Options | Expand Filesystem
 * Advanced Options | Change Memory split to 16
-<br/>Reboot
+<br/>
+Reboot
 ```
 sudo reboot
 ```
