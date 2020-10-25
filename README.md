@@ -129,7 +129,7 @@ Click deploy, add the test json and click test<br/>
 Any issues, review logs on your Rpi Zero:
 ```
 sudo nano var/log/system/runtime.log
-sudo nano var/log/user/us-east-1/114744974534/<your-lambda-name>.log
+sudo nano var/log/user/us-east-1/<your-subscription-id>/<your-lambda-name>.log
 ```
 
 
