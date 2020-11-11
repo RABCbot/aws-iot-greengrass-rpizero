@@ -120,6 +120,9 @@ sudo cd /greengrass/ggc/core
 sudo ./greengrassc start
 ```
 
+## AWS Greengrass Core start on boot
+To start on boot use this [systemd script](https://docs.aws.amazon.com/greengrass/latest/developerguide/gg-core.html#start-on-boot)
+
 ## AWS Lambda test
 Create a new lambda using my [tester](https://github.com/RABCbot/aws-iot-greengrass-rpizero/blob/main/lambda/tester/tester.py) python code<br/>
 This lambda requires an inline permission to write to the IoT Core topic, as explain in [readme](https://github.com/RABCbot/aws-iot-greengrass-rpizero/blob/main/lambda/tester/readme.md)<br/>
@@ -131,6 +134,8 @@ Any issues, review logs on your Rpi Zero:
 sudo nano var/log/system/runtime.log
 sudo nano var/log/user/us-east-1/<your-subscription-id>/<your-lambda-name>.log
 ```
+
+
 
 
 
